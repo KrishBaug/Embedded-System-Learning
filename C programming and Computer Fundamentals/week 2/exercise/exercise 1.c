@@ -19,9 +19,14 @@ size_t count_len(const char *s) {
 
 // char *my_strcpy	The function returns the address of the destination
 // string
-char *my_strcpy(const char *s) {
-  char destination[50];
-  while (s)
+char *my_strcpy(const char *s, char *destination) {
+  int length = 0;
+  while (s[length] != '\0') {
+    destination[length] = s[length];
+    length++;
+  }
+
+  return destination;
 }
 
 int main() {
@@ -31,5 +36,6 @@ int main() {
   printf("Enter the word :");
   scanf("%s", source);
   printf("Length of the word : %d\n", count_len(source));
+  printf("Copied string %s\n", my_strcpy(source, destination));
   return 0;
 }
