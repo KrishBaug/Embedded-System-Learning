@@ -1,0 +1,16 @@
+Exercise 1: Dynamically Allocated Array
+Write a C program to implement a dynamically allocated integer array. The program should ask the user to enter the number of elements, allocate memory for that many integers using malloc(), read the elements from the user, calculate and display their sum and average, and release the allocated memory using free(). The program should check whether memory allocation is successful before using the pointer. Dynamic memory is allocated from the heap at runtime, and it must be released using free() to prevent memory leaks.
+
+Exercise 2: Function-Pointer-Based Calculator
+Write a C program to implement a simple calculator using function pointers. Define separate functions for addition, subtraction, multiplication, and division, each accepting two integer arguments and returning an integer result. Store the addresses of these functions in an array of function pointers. Ask the user to choose an operation, use the selected function pointer to call the corresponding function, and display the result. The program should handle division by zero safely. Function pointers store the address of a function and can be called through the pointer, enabling selection of a function at runtime.
+
+Exercise 3: Pointer Aliasing
+Write a C program to demonstrate pointer aliasing. Declare an integer variable and create two pointers that store the address of the same variable. Modify the variable through the first pointer and display its value through the second pointer. Then modify it through the second pointer and display its value through the first pointer. The program should show that both pointers refer to the same memory location, so a change made through one pointer is visible through the other pointer. Pointer aliasing occurs when two or more pointers access the same memory location.
+
+Exercise 4: Memory Leak and Invalid Access
+Write a C program to demonstrate the difference between a memory leak and invalid memory access. First, allocate memory using malloc(), overwrite the pointer with another allocation without calling free() for the first allocation, and explain that this creates a memory leak. Then, allocate memory using malloc(), release it using free(), and attempt to access the memory after freeing it to demonstrate dangling-pointer or invalid memory access. The program should include comments explaining why each case is unsafe, and it should show the correct practice of setting a pointer to NULL after calling free(). Memory that is allocated but never freed causes a memory leak, while accessing memory after it has been freed is invalid.
+
+
+Exercise 5: Linked List Using Dynamic Allocation
+Write a C program to implement a singly linked list using dynamic memory allocation. Define a structure named Node containing an integer data field and a pointer to the next node. The program should provide menu-driven functions to insert a node at the beginning, insert a node at the end, display all nodes, and delete a node from the beginning. Each new node should be created using malloc(), and all nodes should be released using free() before the program ends to avoid memory leaks. The program should handle an empty list properly. Dynamic memory allocation is required because the number of nodes is not known in advance, and each node is stored in heap memory.
+
